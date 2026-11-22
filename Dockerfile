@@ -4,6 +4,7 @@ COPY app/requirements.txt ./requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 COPY app/ ./
 ENV PORT=8000
+ENV GREETING="Hello, Docker!"
 ENV STORAGE=sqlite
 ENV DATA_FILE=/data/counter.db
 EXPOSE 8000
